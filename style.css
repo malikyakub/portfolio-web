@@ -173,6 +173,7 @@ main{
 #works ul{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     & li{
         margin: 10px;
         list-style: none;
@@ -180,9 +181,14 @@ main{
         & img{
             width: 400px;
             border-radius: 10px;
+            filter: grayscale();
+            transition: 0.2s linear;
         }
         &:hover{
-            transform: scale(1.05);
+            transform: scale(1.03);
+        }
+        &:hover img{
+            filter: none;
         }
     }
 }
@@ -218,6 +224,7 @@ main{
     & .imgs{
         margin-top: 40px;
         margin-right: 50px;
+        transition: 0.4s ease-in-out;
         /* margin: 40px 100px 0 0; */
         &:hover{
             & #obj{
